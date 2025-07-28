@@ -1,7 +1,7 @@
-import { User, Mail, Phone, ArrowRight } from "lucide-react"
+import { User, Mail, Phone } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import { Card, CardContent } from "./Card"
-import { Button } from "./Button"
+// import { Button } from "./Button"
 
 export function ContactSection() {
   return (

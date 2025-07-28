@@ -1,11 +1,18 @@
 "use client"
 
-import { ArrowRight } from "lucide-react"
+import { useState } from "react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "./Card"
 import { Badge } from "./Badge"
 
-export function SessionsSection({ sessions, onSessionClick }) {
+export function SessionsSection({ sessions }) {
+  const [expandedSession, setExpandedSession] = useState(null)
+
+  const toggleExpand = (sessionId) => {
+    setExpandedSession(expandedSession === sessionId ? null : sessionId)
+  }
+
   return (
     <section id="sessions" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -22,15 +29,17 @@ export function SessionsSection({ sessions, onSessionClick }) {
           {sessions.map((session, index) => (
             <AnimatedSection key={index} delay={index * 100}>
               <Card
-                className="group hover:shadow-lg transition-all duration-300 border-green-100 hover:border-green-200 cursor-pointer hover:scale-[1.02] h-full"
-                onClick={() => onSessionClick(session)}
+                className={`group hover:shadow-lg transition-all duration-300 border-green-100 hover:border-green-200 cursor-pointer ${
+                  expandedSession === session.id ? "ring-2 ring-green-300 shadow-xl" : ""
+                }`}
+                onClick={() => toggleExpand(session.id)}
               >
                 <CardHeader>
                   <div className="mb-4">
                     <img
                       src={session.image || "/placeholder.svg"}
                       alt={session.title}
-                      className="w-full h-48 object-cover rounded-lg border border-green-100"
+                      className="w-full h-full object-cover rounded-lg border border-green-100"
                     />
                   </div>
                   <div className="flex items-start justify-between gap-4">
@@ -43,13 +52,25 @@ export function SessionsSection({ sessions, onSessionClick }) {
                         By {session.authors}
                       </CardDescription>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-green-400 group-hover:text-green-600 transition-colors flex-shrink-0 mt-1" />
+                    {expandedSession === session.id ? (
+                      <ChevronUp className="w-5 h-5 text-green-400 group-hover:text-green-600 transition-colors flex-shrink-0 mt-1" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-green-400 group-hover:text-green-600 transition-colors flex-shrink-0 mt-1" />
+                    )}
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-green-700 leading-relaxed line-clamp-3">{session.abstract}</p>
+                  {/* Conditionally render abstract or full description */}
+                  {expandedSession === session.id ? (
+                    <p className="text-green-700 leading-relaxed pt-4 mt-4 border-t border-green-100">
+                      {session.fullDescription}
+                    </p>
+                  ) : (
+                    <p className="text-green-700 leading-relaxed line-clamp-3">{session.abstract}</p>
+                  )}
+
                   <div className="mt-4 text-green-600 font-medium text-sm group-hover:text-green-700 transition-colors">
-                    Click to read more →
+                    {expandedSession === session.id ? "Click to collapse ↑" : "Click to expand ↓"}
                   </div>
                 </CardContent>
               </Card>
