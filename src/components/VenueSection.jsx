@@ -1,9 +1,31 @@
+import React from "react"
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet"
+import "leaflet/dist/leaflet.css"
+import L from "leaflet"
+
+// Import marker images
+import markerIconPng from "leaflet/dist/images/marker-icon.png"
+import markerShadowPng from "leaflet/dist/images/marker-shadow.png"
+
+// Import other components and icons
 import { MapPin, Calendar, Clock, ArrowRight } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import { Card, CardContent } from "./Card"
 import { Button } from "./Button"
 
+const customIcon = new L.Icon({
+  iconUrl: markerIconPng,
+  shadowUrl: markerShadowPng,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41], 
+  popupAnchor: [1, -34], 
+  shadowSize: [41, 41],
+})
+
 export function VenueSection() {
+
+  const venuePosition = [17.7852722, 83.3801532]
+
   return (
     <section id="venue" className="py-20 bg-gradient-to-br from-green-50 to-white">
       <div className="container mx-auto px-4">
@@ -13,9 +35,9 @@ export function VenueSection() {
             <p className="text-xl text-green-600">Join us at this premier venue in Visakhapatnam</p>
           </div>
         </AnimatedSection>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
+            {/* Venue Card */}
             <AnimatedSection delay={200}>
               <Card className="border-green-200 bg-gradient-to-br from-white to-green-50 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 pt-10">
@@ -32,14 +54,21 @@ export function VenueSection() {
                   <Button
                     variant="outline"
                     className="w-full bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-all duration-300 font-semibold"
+                    onClick={() =>
+                      window.open(
+                        // `https://www.openstreetmap.org/?mlat=${venuePosition[0]}&mlon=${venuePosition[1]}#map=17/${venuePosition[0]}/${venuePosition[1]}`,
+                        // "_blank"
+                        `https://maps.app.goo.gl/48cGWAL6Eq8xotUZ7`
+                      )
+                    }
                   >
-                    View on Maps
+                    View on Map
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </CardContent>
               </Card>
             </AnimatedSection>
-
+            {/* Date & Time Card */}
             <AnimatedSection delay={400}>
               <Card className="border-green-200 bg-gradient-to-br from-white to-green-50 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
                 <CardContent className="p-8 pt-10">
@@ -61,15 +90,26 @@ export function VenueSection() {
               </Card>
             </AnimatedSection>
           </div>
-
+          {/* Leaflet Map */}
           <AnimatedSection delay={600}>
             <div className="relative">
-              <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center shadow-lg">
-                <img
-                  src="https://via.placeholder.com/600x400?text=SB+Square+Hotel"
-                  alt="SB Square Hotel & Banquet Visakhapatnam"
-                  className="w-full h-full object-cover rounded-2xl"
-                />
+              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+                <MapContainer
+                  center={venuePosition}
+                  zoom={16}
+                  scrollWheelZoom={false}
+                  className="w-full h-full"
+                >
+                  <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  />
+                  {/* --- FIX --- */}
+                  {/* Pass the custom icon instance to the Marker's `icon` prop */}
+                  <Marker position={venuePosition} icon={customIcon}>
+                    <Popup>SB Square Hotel & Banquet</Popup>
+                  </Marker>
+                </MapContainer>
               </div>
             </div>
           </AnimatedSection>
