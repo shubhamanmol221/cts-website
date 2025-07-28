@@ -7,27 +7,27 @@ export function SpeakersSection() {
   const speakers = [
     {
       name: "Dr. Srikanth",
-      topic: "802.11 PHY Evolution",
-      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
-    },
-    {
-      name: "Susinder Gulasekaran",
-      topic: "Candela Assist",
+      topic: "802.11 PHY evolution, hits and misses",
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Rasika",
-      topic: "Candela Assist",
+      topic: "Exploring Wi-Fi 7’s Security Enhancements",
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Shashank",
-      topic: "Adaptive DFS",
+      topic: "Enhancing Channel Selection with Adaptive DFS",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
+    },
+    {
+      name: "Susinder Gulasekaran",
+      topic: "The problems with spatial reuse",
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
       name: "Shivam Thakur",
-      topic: "Candela Assist",
+      topic: "Nuts and Bolts of Wifi and OpenWrt",
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
   ]

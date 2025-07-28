@@ -19,27 +19,110 @@ function App() {
 
   const sessions = [
     {
-      id: "phy-evolution",
-      title: "802.11 PHY evolution; hits and misses",
-      authors: "Dr. Srikanth",
-      image: "/placeholder.svg?height=200&width=300",
-      abstract:
-        "The WiFi success story has been built on evolving 802.11 standards adding higher speeds and other features. In the PHY evolution, crucial technologies like OFDM, MIMO, higher-order QAM, OFDMA, MU-MIMO etc. have been standardized to move the technology to achieve greater speeds amongst other benefits. In this talk we will talk about what has clicked with respect to practice and some which have not worked well in practice.",
-      category: "PHY Layer",
-      time: "9:00 AM - 10:00 AM",
-      duration: "60 minutes",
-      fullDescription:
-        "This comprehensive session will take you through the journey of 802.11 PHY layer evolution, examining both the successes and challenges faced in implementing various technologies. We'll explore how OFDM revolutionized wireless communication, the impact of MIMO technology on throughput and reliability, and the practical implications of higher-order QAM modulation schemes. The presentation will also cover the transition to OFDMA and MU-MIMO in Wi-Fi 6, discussing real-world performance versus theoretical expectations.",
-      objectives: [
-        "Understand the historical evolution of 802.11 PHY layer technologies",
-        "Analyze the practical implementation challenges of key technologies",
-        "Evaluate the real-world performance of MIMO, OFDM, and QAM",
-        "Explore the transition to Wi-Fi 6 technologies like OFDMA and MU-MIMO",
-      ],
-      targetAudience:
-        "Network engineers, RF engineers, wireless technology researchers, and technical professionals working with Wi-Fi systems",
-      prerequisites: "Basic understanding of wireless communication principles and 802.11 standards",
-    },
+    id: "phy-evolution",
+    title: "802.11 PHY evolution; hits and misses",
+    authors: "Dr. Srikanth",
+    abstract:
+      "The WiFi success story has been built on evolving 802.11 standards adding higher speeds and other features. In the PHY evolution, crucial technologies like OFDM, MIMO, higher-order QAM, OFDMA, MU-MIMO etc. have been standardized to move the technology to achieve greater speeds amongst other benefits. In this talk we will talk about what has clicked with respect to practice and some which have not worked well in practice.",
+    category: "PHY Layer",
+    time: "9:00 AM - 10:00 AM",
+    duration: "60 minutes",
+    fullDescription:
+      "This comprehensive session will take you through the journey of 802.11 PHY layer evolution, examining both the successes and challenges faced in implementing various technologies. We'll explore how OFDM revolutionized wireless communication, the impact of MIMO technology on throughput and reliability, and the practical implications of higher-order QAM modulation schemes. The presentation will also cover the transition to OFDMA and MU-MIMO in Wi-Fi 6, discussing real-world performance versus theoretical expectations.",
+    objectives: [
+      "Understand the historical evolution of 802.11 PHY layer technologies",
+      "Analyze the practical implementation challenges of key technologies",
+      "Evaluate the real-world performance of MIMO, OFDM, and QAM",
+      "Explore the transition to Wi-Fi 6 technologies like OFDMA and MU-MIMO",
+    ],
+    targetAudience:
+      "Network engineers, RF engineers, wireless technology researchers, and technical professionals working with Wi-Fi systems",
+    prerequisites: "Basic understanding of wireless communication principles and 802.11 standards",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "Exploring Wi-Fi 7’s Security Enhancements",
+    authors: "Rasika",
+    abstract:
+      "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
+    objectives: [
+      "Understand the fundamentals of DFS and radar detection",
+      "Learn about adaptive algorithms for intelligent channel selection",
+      "Explore techniques to minimize network disruption during DFS events",
+      "Analyze real-world case studies of adaptive DFS implementation",
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "Enhancing Channel Selection with Adaptive DFS",
+    authors: "Shashank Tadakamadla",
+    abstract:
+      "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
+    objectives: [
+      "Understand the fundamentals of DFS and radar detection",
+      "Learn about adaptive algorithms for intelligent channel selection",
+      "Explore techniques to minimize network disruption during DFS events",
+      "Analyze real-world case studies of adaptive DFS implementation",
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "The problems with spatial reuse",
+    authors: "Susinder Gulasekaran",
+    abstract:
+      "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
+    objectives: [
+      "Understand the fundamentals of DFS and radar detection",
+      "Learn about adaptive algorithms for intelligent channel selection",
+      "Explore techniques to minimize network disruption during DFS events",
+      "Analyze real-world case studies of adaptive DFS implementation",
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "Nuts and Bolts of Wifi and OpenWrt",
+    authors: "Shivam Thakur",
+    abstract:
+      "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
+    objectives: [
+      "Understand the fundamentals of DFS and radar detection",
+      "Learn about adaptive algorithms for intelligent channel selection",
+      "Explore techniques to minimize network disruption during DFS events",
+      "Analyze real-world case studies of adaptive DFS implementation",
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
     {
       id: "candela-assist",
       title: "Built for Engineers. Driven by AI. Introducing Candela Assist",
@@ -61,28 +144,6 @@ function App() {
       targetAudience:
         "Test engineers, network administrators, QA professionals, and anyone involved in wireless network validation",
       prerequisites: "Familiarity with wireless network testing concepts and basic understanding of AI/ML principles",
-    },
-    {
-      id: "adaptive-dfs",
-      title: "Enhancing Channel Selection with Adaptive DFS",
-      authors: "Shashank",
-      image: "/placeholder.svg?height=200&width=300",
-      abstract:
-        "The objective of this presentation is to provide insight into how adaptive Dynamic Frequency Selection (DFS) can optimize channel selection by minimizing radar interference while maintaining performance in Wi-Fi networks.",
-      category: "Network Optimization",
-      time: "11:45 AM - 12:45 PM",
-      duration: "60 minutes",
-      fullDescription:
-        "Dynamic Frequency Selection (DFS) is crucial for operating Wi-Fi networks in the 5 GHz band, but traditional implementations can be rigid and inefficient. This session explores adaptive DFS techniques that intelligently respond to radar detection events while minimizing network disruption. We'll discuss advanced algorithms that consider historical radar patterns, network load, and channel quality metrics to make smarter channel selection decisions.",
-      objectives: [
-        "Understand the fundamentals of DFS and radar detection",
-        "Learn about adaptive algorithms for intelligent channel selection",
-        "Explore techniques to minimize network disruption during DFS events",
-        "Analyze real-world case studies of adaptive DFS implementation",
-      ],
-      targetAudience:
-        "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
-      prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
     },
     {
       id: "seamless-switchover",

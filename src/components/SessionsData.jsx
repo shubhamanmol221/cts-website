@@ -11,14 +11,104 @@ export const sessionsData = [
     fullDescription:
       "This comprehensive session will take you through the journey of 802.11 PHY layer evolution, examining both the successes and challenges faced in implementing various technologies. We'll explore how OFDM revolutionized wireless communication, the impact of MIMO technology on throughput and reliability, and the practical implications of higher-order QAM modulation schemes. The presentation will also cover the transition to OFDMA and MU-MIMO in Wi-Fi 6, discussing real-world performance versus theoretical expectations.",
     objectives: [
-      "Understand the historical evolution of 802.11 PHY layer technologies",
-      "Analyze the practical implementation challenges of key technologies",
-      "Evaluate the real-world performance of MIMO, OFDM, and QAM",
-      "Explore the transition to Wi-Fi 6 technologies like OFDMA and MU-MIMO",
+      "Trace the evolution of key PHY-layer technologies in the IEEE 802.11 standards, including OFDM, MIMO, OFDMA, and MU-MIMO.",
+      "Understand the role of higher-order modulation schemes like QAM in driving Wi-Fi throughput improvements.",
+      "Examine which PHY features have been successfully adopted in real-world deployments and contributed to Wi-Fi's growth.",
+      "Analyze the gaps between standardized PHY capabilities and their practical adoption or performance impact.",
+      "Foster critical thinking around the future direction of PHY innovations and how to align them with deployment realities."
     ],
     targetAudience:
       "Network engineers, RF engineers, wireless technology researchers, and technical professionals working with Wi-Fi systems",
     prerequisites: "Basic understanding of wireless communication principles and 802.11 standards",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "Exploring Wi-Fi 7’s Security Enhancements",
+    authors: "Rasika",
+    abstract:
+      "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
+    objectives: [
+      "Understand the security landscape of Wi-Fi 7 as defined by the IEEE 802.11be standard.",
+      "Examine how Wi-Fi 7 enforces WPA3 as a mandatory security protocol and its implications for device and network compatibility.",
+      "Explore the security challenges and solutions introduced for Multi-Link Operation (MLO) in Wi-Fi 7.",
+      "Learn about new protective features like Beacon Protection and their role in safeguarding management frames.",
+      "Compare Wi-Fi 7's security enhancements with previous Wi-Fi generations to assess the evolution of wireless protection mechanisms."
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "Enhancing Channel Selection with Adaptive DFS",
+    authors: "Shashank Tadakamadla",
+    abstract:
+      "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
+    objectives: [
+      "Define the concept of Real-Time Wi-Fi Testing and how it differs from traditional lab-based or static testing methods.",
+      "Explore techniques for simulating real-world user behavior, mobility, and interference in wireless networks.",
+      "Understand the tools and frameworks used for conducting real-time testing in dynamic environments.",
+      "Evaluate the benefits of real-time insights into network performance, stability, and responsiveness.",
+      "Discuss practical applications of real-time testing in network validation, optimization, and deployment readiness."
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "The problems with spatial reuse",
+    authors: "Susinder Gulasekaran",
+    abstract:
+      "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
+    objectives: [
+      "Understand the concept of spatial reuse as introduced in Wi-Fi 6 and extended in Wi-Fi 7, including OBSS PD and PSR mechanisms.",
+      "Analyze the practical challenges and limitations preventing real-world adoption of spatial reuse in dense wireless deployments.",
+      "Explore the technical and architectural shortcomings in the Wi-Fi standards that impact the effectiveness of spatial reuse.",
+      "Review empirical observations and case studies that illustrate the disconnect between theoretical gains and actual deployment realities.",
+      "Discuss potential directions for improving spatial reuse mechanisms in future Wi-Fi revisions or alternative solutions."
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
+  },
+  {
+    id: "adaptive-dfs",
+    title: "Nuts and Bolts of Wifi and OpenWrt",
+    authors: "Shivam Thakur",
+    abstract:
+      "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
+    category: "Network Optimization",
+    time: "11:45 AM - 12:45 PM",
+    duration: "60 minutes",
+    fullDescription:
+      "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
+    objectives: [
+      "Gain a foundational understanding of the Linux networking and Wi-Fi subsystem, including key kernel interfaces.",
+      "Explore the architecture of OpenWrt and its integration with Linux kernel networking frameworks.",
+      "Understand the enhancements introduced by Wi-Fi 7 in the Linux kernel and how they impact wireless driver development.",
+      "Demonstrate practical use of Rust in embedded systems through a live demo on Banana Pi R4 for Wi-Fi management.",
+      "Compare and analyze various mesh networking technologies supported in Linux and OpenWrt ecosystems.",
+      "Develop the ability to navigate and extend kernel frameworks for wireless and mesh networking use cases."
+    ],
+    targetAudience:
+      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
+    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
   },
   {
     id: "candela-assist",
@@ -40,27 +130,6 @@ export const sessionsData = [
     targetAudience:
       "Test engineers, network administrators, QA professionals, and anyone involved in wireless network validation",
     prerequisites: "Familiarity with wireless network testing concepts and basic understanding of AI/ML principles",
-  },
-  {
-    id: "adaptive-dfs",
-    title: "Enhancing Channel Selection with Adaptive DFS",
-    authors: "Shashank",
-    abstract:
-      "The objective of this presentation is to provide insight into how adaptive Dynamic Frequency Selection (DFS) can optimize channel selection by minimizing radar interference while maintaining performance in Wi-Fi networks.",
-    category: "Network Optimization",
-    time: "11:45 AM - 12:45 PM",
-    duration: "60 minutes",
-    fullDescription:
-      "Dynamic Frequency Selection (DFS) is crucial for operating Wi-Fi networks in the 5 GHz band, but traditional implementations can be rigid and inefficient. This session explores adaptive DFS techniques that intelligently respond to radar detection events while minimizing network disruption. We'll discuss advanced algorithms that consider historical radar patterns, network load, and channel quality metrics to make smarter channel selection decisions.",
-    objectives: [
-      "Understand the fundamentals of DFS and radar detection",
-      "Learn about adaptive algorithms for intelligent channel selection",
-      "Explore techniques to minimize network disruption during DFS events",
-      "Analyze real-world case studies of adaptive DFS implementation",
-    ],
-    targetAudience:
-      "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
-    prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
   },
   {
     id: "seamless-switchover",
