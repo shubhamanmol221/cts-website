@@ -125,4 +125,25 @@ export const sessionsData = [
       "Network administrators, system engineers, DevOps professionals, and network monitoring specialists",
     prerequisites: "Basic networking knowledge and familiarity with packet analysis tools",
   },
+  {
+      id: "real-time-testing",
+      title: "Real Time WiFi Testing",
+      authors: "Shashank Tadakamadla",
+      abstract:
+        "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
+      category: "Testing & Validation",
+      time: "5:45 PM - 6:30 PM",
+      duration: "45 minutes",
+      fullDescription:
+        "This session explores the evolution from traditional static Wi-Fi testing to dynamic real-time evaluation methodologies. We'll examine how real-time testing frameworks can capture network performance under actual usage conditions, including user mobility, varying traffic loads, and environmental interference. The presentation will cover advanced testing tools and techniques that provide continuous monitoring and instant feedback on network quality, enabling proactive optimization and troubleshooting.",
+      objectives: [
+        "Understand the limitations of traditional Wi-Fi testing methods",
+        "Learn real-time testing frameworks and methodologies",
+        "Explore tools for continuous network performance monitoring",
+        "Analyze real-world interference patterns and their impact",
+        "Implement proactive network optimization strategies",
+      ],
+      targetAudience: "Network test engineers, QA professionals, Wi-Fi system validators, and network operations teams",
+      prerequisites: "Experience with Wi-Fi testing tools and basic understanding of network performance metrics",
+    },
 ] 
