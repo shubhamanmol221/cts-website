@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { AnimatedSection } from "./AnimatedSection"
-import { Button } from "./Button"
-import { ArrowRight, Download, ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function PosterSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -63,15 +62,6 @@ export function PosterSection() {
 
   const goToImage = (index) => {
     setCurrentImageIndex(index)
-  }
-
-  const downloadPoster = () => {
-    const link = document.createElement("a")
-    link.href = "/images/cts-poster.jpg"
-    link.download = "CTS-2025-Poster.jpg"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
   }
 
   const currentImage = images[currentImageIndex]
@@ -139,55 +129,6 @@ export function PosterSection() {
                   <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
                 </button>
               ))}
-            </div>
-
-            {/* Action Buttons */}
-            <div className="text-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="px-8 py-3 rounded-xl shadow-lg">
-                  Register Now
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-                {currentImage.isPoster && (
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    onClick={downloadPoster}
-                    className="px-8 py-3 rounded-xl bg-white/80 backdrop-blur-sm shadow-lg border-green-600 text-green-600 hover:bg-green-50"
-                  >
-                    <Download className="w-5 h-5 mr-2" />
-                    Download Poster
-                  </Button>
-                )}
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        <AnimatedSection delay={600}>
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-green-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-xl">22</span>
-              </div>
-              <h3 className="font-bold text-green-800 mb-2">August 2025</h3>
-              <p className="text-green-600">Join us for a full day of innovation</p>
-            </div>
-
-            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-green-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-sm">VZM</span>
-              </div>
-              <h3 className="font-bold text-green-800 mb-2">Visakhapatnam</h3>
-              <p className="text-green-600">Beautiful coastal city venue</p>
-            </div>
-
-            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-xl border border-green-100">
-              <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">CTS</span>
-              </div>
-              <h3 className="font-bold text-green-800 mb-2">Technology Summit</h3>
-              <p className="text-green-600">Wireless innovation showcase</p>
             </div>
           </div>
         </AnimatedSection>
