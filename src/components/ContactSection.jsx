@@ -51,10 +51,10 @@ export function ContactSection() {
                 </div>
 
                 <div className="mt-10 pt-8 border-t border-green-100">
-                  <Button className="w-full py-3 rounded-xl">
+                  {/* <Button className="w-full py-3 rounded-xl">
                     Register for CTS 2025
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>

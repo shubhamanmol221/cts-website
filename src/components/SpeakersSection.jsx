@@ -16,11 +16,6 @@ export function SpeakersSection() {
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
     {
-      name: "Shivam Thakur",
-      topic: "Candela Assist",
-      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
-    },
-    {
       name: "Rasika",
       topic: "Candela Assist",
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
@@ -28,6 +23,11 @@ export function SpeakersSection() {
     {
       name: "Shashank",
       topic: "Adaptive DFS",
+      image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
+    },
+    {
+      name: "Shivam Thakur",
+      topic: "Candela Assist",
       image: "/placeholder.svg?height=120&width=120", // Changed placeholder query
     },
   ]

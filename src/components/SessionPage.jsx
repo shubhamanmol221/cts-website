@@ -147,9 +147,9 @@ export function SessionPage({ session, onBack }) {
                   Join us on August 22, 2025, for this insightful presentation and connect with industry experts.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="px-8 py-3 rounded-xl">
+                  {/* <Button size="lg" className="px-8 py-3 rounded-xl">
                     Register for CTS 2025
-                  </Button>
+                  </Button> */}
                   <Button variant="outline" size="lg" className="px-8 py-3 rounded-xl bg-transparent" onClick={onBack}>
                     View All Sessions
                   </Button>
