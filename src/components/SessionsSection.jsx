@@ -26,6 +26,13 @@ export function SessionsSection({ sessions, onSessionClick }) {
                 onClick={() => onSessionClick(session)}
               >
                 <CardHeader>
+                  <div className="mb-4">
+                    <img
+                      src={session.image || "/placeholder.svg"}
+                      alt={session.title}
+                      className="w-full h-48 object-cover rounded-lg border border-green-100"
+                    />
+                  </div>
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <Badge className="bg-green-100 text-green-700 mb-3">{session.category}</Badge>

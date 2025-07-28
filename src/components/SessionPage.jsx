@@ -44,6 +44,18 @@ export function SessionPage({ session, onBack }) {
           <div className="max-w-4xl mx-auto">
             <Badge className="bg-green-100 text-green-700 mb-4 text-sm font-medium">{session.category}</Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-6 leading-tight">{session.title}</h1>
+
+            {/* Add session image */}
+            {session.image && (
+              <div className="mb-8">
+                <img
+                  src={session.image || "/placeholder.svg"}
+                  alt={session.title}
+                  className="w-full max-w-2xl mx-auto h-64 object-cover rounded-xl shadow-lg border border-green-200"
+                />
+              </div>
+            )}
+
             <div className="flex flex-wrap items-center gap-6 mb-8 text-green-700">
               <div className="flex items-center gap-2">
                 <User className="w-5 h-5" />

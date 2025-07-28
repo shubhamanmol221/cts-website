@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { Calendar, Clock, MapPin, Zap, ArrowRight, ChevronDown, Play, Pause } from "lucide-react"
-import { Button } from "./Button"
+import { Calendar, Clock, MapPin, Zap, Play, Pause } from "lucide-react"
 
 export function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true)
@@ -24,9 +23,9 @@ export function HeroSection() {
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video ref={videoRef} autoPlay muted loop playsInline className="w-full h-full object-cover">
-          <source src="/wifi-fest.mp4" type="video/mp4" />
+          <source src="\wifi-fest.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-green-50/45 to-green-100/35"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-green-50/70 to-green-100/60"></div>
       </div>
 
       {/* Video Control Button */}
@@ -44,11 +43,11 @@ export function HeroSection() {
             <Zap className="w-4 h-4" />
             Technology Summit 2025
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-green-800 mb-6 leading-tight drop-shadow-lg animate-fade-in-up animation-delay-200">
+          <h1 className="text-5xl md:text-7xl font-bold text-green-800 mb-6 leading-tight drop-shadow-sm animate-fade-in-up animation-delay-200">
             Candela Technology
             <span className="block text-green-600">Summit 2025</span>
           </h1>
-          <p className="text-xl text-green-700 mb-8 leading-relaxed drop-shadow-lg animate-fade-in-up animation-delay-400">
+          <p className="text-xl text-green-700 mb-8 leading-relaxed drop-shadow-sm animate-fade-in-up animation-delay-400">
             Join us for an immersive day of cutting-edge wireless technology insights, AI-driven innovations, and the
             future of Wi-Fi standards.
           </p>
@@ -66,17 +65,6 @@ export function HeroSection() {
               <MapPin className="w-5 h-5" />
               <span className="font-medium">Visakhapatnam</span>
             </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
-            <Button size="lg" className="px-8 py-3 rounded-xl shadow-lg">
-              Register Now
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 rounded-xl bg-white/70 backdrop-blur-sm shadow-lg">
-              View Schedule
-              <ChevronDown className="w-5 h-5 ml-2" />
-            </Button>
           </div>
         </div>
       </div>
