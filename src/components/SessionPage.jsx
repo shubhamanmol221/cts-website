@@ -21,14 +21,14 @@ export function SessionPage({ session, onBack }) {
               <div className="hidden md:block text-green-700 text-sm font-medium">Powered by Candela Technologies</div>
             </div>
             <div className="flex items-center gap-4">
-              <Button
+              {/* <Button
                 variant="outline"
                 size="sm"
                 className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
               >
                 <Share2 className="w-4 h-4 mr-2" />
                 Share
-              </Button>
+              </Button> */}
               <Button variant="ghost" size="sm" onClick={onBack}>
                 <ArrowRight className="w-4 h-4 mr-2 rotate-180" />
                 Back to Sessions

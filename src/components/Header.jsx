@@ -15,7 +15,7 @@ export function Header({ onBackToHome }) {
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#speakers" className="text-green-700 hover:text-green-800 font-medium transition-colors">
-              Speakers
+              Guest Speakers
             </a>
             <a href="#sessions" className="text-green-700 hover:text-green-800 font-medium transition-colors">
               Sessions
