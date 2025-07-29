@@ -9,7 +9,7 @@ export function PosterSection() {
 
   const images = [
     {
-      src: "/images/cts-poster.jpg",
+      src: "/images/cts_banner.png",
       alt: "Candela Technology Summit 2025",
       // title: "CTS 2025 Official Poster",
       description: "Experience the beauty of Visakhapatnam while attending cutting-edge technology sessions",

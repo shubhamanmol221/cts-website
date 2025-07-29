@@ -17,7 +17,7 @@ function App() {
       id: "phy-evolution",
       title: "802.11 PHY evolution; hits and misses",
       authors: "Dr. Srikanth",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/srikanth_session.png",
       abstract:
         "The WiFi success story has been built on evolving 802.11 standards adding higher speeds and other features. In the PHY evolution, crucial technologies like OFDM, MIMO, higher-order QAM, OFDMA, MU-MIMO etc. have been standardized to move the technology to achieve greater speeds amongst other benefits. In this talk we will talk about what has clicked with respect to practice and some which have not worked well in practice.",
       category: "PHY Layer",

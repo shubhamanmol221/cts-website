@@ -25,7 +25,7 @@ export function Header({ onBackToHome }) {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4 cursor-pointer" onClick={onBackToHome}>
-              <img src="/images/cts-logo.png" alt="CTS 2025 Logo" className="h-10 w-auto" />
+              <img src="/images/cts_logo.png" alt="CTS 2025 Logo" className="h-10 w-auto" />
               <div className="text-green-700 text-sm font-medium">Powered by Candela Technologies</div>
             </div>
 

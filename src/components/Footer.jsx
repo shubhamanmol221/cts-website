@@ -10,7 +10,7 @@ export function Footer() {
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               {/* Replaced the Wifi icon and text with the new logo image */}
-              <img src="/images/cts-logo.png" alt="CTS 2025 Logo" className="h-10 w-auto" />
+              <img src="/images/cts_logo.png" alt="CTS 2025 Logo" className="h-10 w-auto" />
             </div>
             <p className="text-green-200 mb-6">Candela Technology Summit - Advancing Wireless Innovation</p>
             <p className="text-green-300 text-sm">© 2025 CTS Event — Powered by Candela Technologies</p>
