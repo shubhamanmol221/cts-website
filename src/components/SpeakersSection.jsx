@@ -32,7 +32,7 @@ export function SpeakersSection() {
     },
      {
       name: "Gjermund Raaen",
-      topic: "Adaptive DFS",
+      topic: "EHT Preamble",
       image: "images/Gjermund Raaen.png", // Changed to passport size dimensions
     },
   ]
