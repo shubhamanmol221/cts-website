@@ -235,7 +235,7 @@ function App() {
     },
   ]
 
-  const handleBackToHome = () => {
+ const handleBackToHome = () => {
     // This function can be used for other navigation if needed
   }
 
@@ -247,7 +247,6 @@ function App() {
       <StatsSection />
       <SpeakersSection />
       <SessionsSection sessions={sessions} />
-      <VenueSection />
       <ContactSection />
       <Footer />
     </div>
@@ -255,3 +254,4 @@ function App() {
 }
 
 export default App
+

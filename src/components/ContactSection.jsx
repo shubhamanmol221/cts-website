@@ -1,7 +1,6 @@
-import { User, Mail, Phone } from "lucide-react"
+import { Mail } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import { Card, CardContent } from "./Card"
-// import { Button } from "./Button"
 
 export function ContactSection() {
   return (
@@ -15,47 +14,14 @@ export function ContactSection() {
         </AnimatedSection>
 
         <AnimatedSection delay={300}>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-md mx-auto">
             <Card className="border-green-100">
-              <CardContent className="p-8 pt-10">
-                <div className="space-y-8">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mt-2">
-                      <User className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-green-800">Event Coordinator</h3>
-                      <p className="text-green-600">Contact Name</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mt-2">
-                      <Mail className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-green-800">Email</h3>
-                      <p className="text-green-600">email@candelatech.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mt-2">
-                      <Phone className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-green-800">Phone</h3>
-                      <p className="text-green-600">Mobile Number</p>
-                    </div>
-                  </div>
+              <CardContent className="p-8 pt-10 text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Mail className="w-8 h-8 text-green-600" />
                 </div>
-
-                <div className="mt-10 pt-8 border-t border-green-100">
-                  {/* <Button className="w-full py-3 rounded-xl">
-                    Register for CTS 2025
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button> */}
-                </div>
+                <h3 className="font-semibold text-green-800 text-xl mb-4">Email Us</h3>
+                <p className="text-green-600 text-lg font-medium">info@candelatech.com</p>
               </CardContent>
             </Card>
           </div>

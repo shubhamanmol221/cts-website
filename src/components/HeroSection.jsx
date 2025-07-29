@@ -25,7 +25,7 @@ export function HeroSection() {
         <video ref={videoRef} autoPlay muted loop playsInline className="w-full h-full object-cover">
           <source src="\wifi-fest_new.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-green-50/30 to-green-100/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/30 to-black/40"></div>
       </div>
 
       {/* Video Control Button */}
@@ -36,34 +36,37 @@ export function HeroSection() {
         {isVideoPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
       </button>
 
-      {/* Hero Content */}
+      {/* Hero Content with Rectangle Border */}
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-green-100/80 backdrop-blur-sm text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg animate-fade-in-up">
-            <Zap className="w-4 h-4" />
-            Technology Summit 2025
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-green-800 mb-6 leading-tight drop-shadow-sm animate-fade-in-up animation-delay-200">
-            Candela Technology
-            <span className="block text-green-600">Summit 2025</span>
-          </h1>
-          <p className="text-xl text-green-700 mb-8 leading-relaxed drop-shadow-sm animate-fade-in-up animation-delay-400">
-            Join us for an immersive day of cutting-edge wireless technology insights, AI-driven innovations, and the
-            future of Wi-Fi standards.
-          </p>
+          {/* Rectangle Border Container */}
+          <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-2xl p-8 md:p-12 shadow-2xl hover:bg-white/15 hover:border-white/40 transition-all duration-500 hover:scale-[1.02]">
+            <div className="inline-flex items-center gap-2 bg-green-100/90 backdrop-blur-sm text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-lg animate-fade-in-up">
+              <Zap className="w-4 h-4" />
+              Technology Summit 2025
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg animate-fade-in-up animation-delay-200">
+              Candela Technology
+              <span className="block text-green-300">Summit 2025</span>
+            </h1>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md animate-fade-in-up animation-delay-400">
+              Join us for an immersive day of cutting-edge wireless technology insights, AI-driven innovations, and the
+              future of Wi-Fi standards.
+            </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up animation-delay-600">
-            <div className="flex items-center gap-2 text-green-700 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md">
-              <Calendar className="w-5 h-5" />
-              <span className="font-medium">August 22, 2025 (Friday)</span>
-            </div>
-            <div className="flex items-center gap-2 text-green-700 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md">
-              <Clock className="w-5 h-5" />
-              <span className="font-medium">8:30 AM – 6:30 PM</span>
-            </div>
-            <div className="flex items-center gap-2 text-green-700 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md">
-              <MapPin className="w-5 h-5" />
-              <span className="font-medium">Visakhapatnam</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in-up animation-delay-600">
+              <div className="flex items-center gap-2 text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-white/20">
+                <Calendar className="w-5 h-5" />
+                <span className="font-medium">August 22, 2025 (Friday)</span>
+              </div>
+              <div className="flex items-center gap-2 text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-white/20">
+                <Clock className="w-5 h-5" />
+                <span className="font-medium">8:30 AM – 6:30 PM</span>
+              </div>
+              <div className="flex items-center gap-2 text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md border border-white/20">
+                <MapPin className="w-5 h-5" />
+                <span className="font-medium">Visakhapatnam</span>
+              </div>
             </div>
           </div>
         </div>
