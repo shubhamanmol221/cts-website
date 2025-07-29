@@ -39,7 +39,7 @@ function App() {
       id: "adaptive-dfs",
       title: "Exploring Wi-Fi 7’s Security Enhancements",
       authors: "Rasika",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/rasika_session.png",
       abstract:
         "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
       category: "Network Optimization",
