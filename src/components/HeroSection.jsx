@@ -23,9 +23,9 @@ export function HeroSection() {
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video ref={videoRef} autoPlay muted loop playsInline className="w-full h-full object-cover">
-          <source src="\wifi-fest.mp4" type="video/mp4" />
+          <source src="\wifi-fest_new.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-green-50/70 to-green-100/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-green-50/30 to-green-100/20"></div>
       </div>
 
       {/* Video Control Button */}
