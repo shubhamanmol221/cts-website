@@ -6,7 +6,7 @@ import { PosterSection } from "./components/PosterSection"
 import { StatsSection } from "./components/StatsSection"
 import { SpeakersSection } from "./components/SpeakersSection"
 import { SessionsSection } from "./components/SessionsSection"
-import { VenueSection } from "./components/VenueSection"
+// import { VenueSection } from "./components/VenueSection"
 import { ContactSection } from "./components/ContactSection"
 import { Footer } from "./components/Footer"
 import "./App.css"
@@ -61,7 +61,7 @@ function App() {
       id: "adaptive-dfs",
       title: "Enhancing Channel Selection with Adaptive DFS",
       authors: "Shashank Tadakamadla",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/sashank_session.png",
       abstract:
         "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
       category: "Network Optimization",
@@ -83,7 +83,7 @@ function App() {
       id: "adaptive-dfs",
       title: "The problems with spatial reuse",
       authors: "Susinder Gulasekaran",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/susinder_session.png",
       abstract:
         "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
       category: "Network Optimization",
@@ -105,7 +105,7 @@ function App() {
       id: "adaptive-dfs",
       title: "Nuts and Bolts of Wifi and OpenWrt",
       authors: "Shivam Thakur",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/shivam_session.png",
       abstract:
         "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
       category: "Network Optimization",
@@ -239,6 +239,8 @@ function App() {
     // This function can be used for other navigation if needed
   }
 
+  
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
       <Header onBackToHome={handleBackToHome} />
@@ -247,6 +249,7 @@ function App() {
       <StatsSection />
       <SpeakersSection />
       <SessionsSection sessions={sessions} />
+      {/* <VenueSection /> */}
       <ContactSection />
       <Footer />
     </div>
