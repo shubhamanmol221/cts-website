@@ -127,7 +127,7 @@ function App() {
       id: "mlo-behaviour-impact",
       title: "MLO Behaviour: Impact on Legacy Devices and Roaming",
       authors: "Shyamala P, Kiranmai N, Rajendra P",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/shyamala_session.png",
       abstract:
         "Multi-Link Operation (MLO) is a key feature in Wi-Fi 7, enabling devices to transmit and receive data over multiple frequency bands simultaneously. This session will explore how MLO impacts legacy Wi-Fi devices and its implications for seamless roaming experiences in mixed network environments.",
       category: "Wi-Fi 7 Features",
@@ -173,7 +173,7 @@ function App() {
       authors: "Gjermund Raaen",
       image: "/images/gjermund_session.png",
       abstract:
-        "This presentation talks about how HE and EHT uses content channels to distribute RU allocation and user info in their preambles at different bandwidths and different modes.",
+        "In this presentation, you will explore how High Efficiency (HE) and Extremely High Throughput (EHT) technologies use content channels to distribute Resource Unit (RU) allocation and user information in their preambles. You'll see how these mechanisms operate across different bandwidths and modes, giving you a practical understanding of how signaling works in Wi-Fi 6 and Wi-Fi 7.",
       category: "PHY Layer",
       time: "02:00 PM - 02:25 PM",
       duration: "25 minutes",
@@ -193,7 +193,7 @@ function App() {
       id: "looking-closer-client-sta-testing",
       title: "Looking Closer at the Client: A Deep Dive into STA side Testing",
       authors: "Sainath P, Deepika B, Badhiri T",
-      image: "/placeholder.svg?height=200&width=300", 
+      image: "/images/sainath_session.png", 
       abstract:
         "Access point performance is often the primary focus during Wi-Fi testing, but understanding the client (STA) behavior is critical. This talk explores techniques to simulate and analyze various client-side conditions and reactions.",
       category: "Client Analysis & Testing",
@@ -217,12 +217,12 @@ function App() {
       authors: "Vardhan S, Siva K, Sahithi U",
       image: "/images/vardhan_session.png",
       abstract:
-        "Candela Assist is an advanced, AI-powered platform designed to streamline wireless testing workflows. It integrates natural language understanding, automation, and visualization tools to empower engineers to design and validate Wi-Fi networks more efficiently.",
+        "Candela Assist is a smart assistant platform designed to support Wi-Fi engineers, device manufacturers, and networking professionals in testing, troubleshooting, and optimizing wireless devices. It offers real-time, voice-enabled and text-based assistance to guide users through complex Wi-Fi scenarios—such as configuring Wi-Fi 7 access points, evaluating smart device performance, or analyzing LANforge test results.",
       category: "AI & Automation",
       time: "02:50 PM - 03:15 PM",
       duration: "25 minutes",
       fullDescription:
-        "Discover how artificial intelligence is transforming wireless network testing with Candela Assist. This session will demonstrate how natural language processing can simplify complex testing procedures, allowing engineers to describe test scenarios in plain English and have them automatically translated into executable test configurations. We'll showcase real-world examples of how AI-driven automation reduces testing time, improves accuracy, and enables more comprehensive network validation.",
+        "Candela Assist is a smart assistant platform designed to support Wi-Fi engineers, device manufacturers, and networking professionals in testing, troubleshooting, and optimizing wireless devices. It offers real-time, voice-enabled and text-based assistance to guide users through complex Wi-Fi scenarios—such as configuring Wi-Fi 7 access points, evaluating smart device performance, or analyzing LANforge test results.",
       objectives: [
         "Learn how AI can streamline wireless testing workflows",
         "Understand natural language processing in network testing",
@@ -259,7 +259,7 @@ function App() {
       id: "lab-promises-vs-live-challenges",
       title: "Lab Promises vs Live Challenges - The Evolution of Wi-Fi Lab Testing",
       authors: "Poojitha Y, Anmol S, Rudra S, Veena P",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/anmol_session.png",
       abstract:
         "This session will explore the discrepancies between Wi-Fi performance in controlled lab environments and real-world live deployments. We will discuss the evolution of Wi-Fi lab testing methodologies to better simulate live challenges and bridge this gap.",
       category: "Testing & Validation",

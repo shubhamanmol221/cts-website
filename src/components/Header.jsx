@@ -9,9 +9,8 @@ export function Header({ onBackToHome }) {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  // Updated to accept the event object and prevent default behavior
   const handleLinkClick = (event, sectionId) => {
-    event.preventDefault() // Prevents the default anchor jump
+    event.preventDefault() 
     setIsMobileMenuOpen(false)
     const section = document.getElementById(sectionId)
     if (section) {
@@ -31,16 +30,32 @@ export function Header({ onBackToHome }) {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#speakers" className="text-green-700 hover:text-green-800 font-medium transition-colors">
+              <a
+                href="#speakers"
+                onClick={(e) => handleLinkClick(e, "speakers")}
+                className="text-green-700 hover:text-green-800 font-medium transition-colors"
+              >
                 Speakers
               </a>
-              <a href="#sessions" className="text-green-700 hover:text-green-800 font-medium transition-colors">
+              <a
+                href="#sessions"
+                onClick={(e) => handleLinkClick(e, "sessions")}
+                className="text-green-700 hover:text-green-800 font-medium transition-colors"
+              >
                 Sessions
               </a>
-              {/* <a href="#venue" className="text-green-700 hover:text-green-800 font-medium transition-colors">
-                Venue
-              </a> */}
-              <a href="#contact" className="text-green-700 hover:text-green-800 font-medium transition-colors">
+              <a
+                href="#panel-discussion"
+                onClick={(e) => handleLinkClick(e, "panel-discussion")}
+                className="text-green-700 hover:text-green-800 font-medium transition-colors"
+              >
+                Panel Discussion
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => handleLinkClick(e, "contact")}
+                className="text-green-700 hover:text-green-800 font-medium transition-colors"
+              >
                 Contact
               </a>
             </nav>
@@ -73,7 +88,7 @@ export function Header({ onBackToHome }) {
                 </button>
               </div>
 
-              {/* Mobile Navigation Links - CORRECTED */}
+              {/* Mobile Navigation Links */}
               <nav className="flex flex-col gap-6">
                 <a
                   href="#speakers"
@@ -88,6 +103,13 @@ export function Header({ onBackToHome }) {
                   className="text-lg font-medium text-green-800 hover:text-green-600 cursor-pointer transition-colors"
                 >
                   Sessions
+                </a>
+                <a
+                  href="#panel-discussion"
+                  onClick={(e) => handleLinkClick(e, "panel-discussion")}
+                  className="text-lg font-medium text-green-800 hover:text-green-600 cursor-pointer transition-colors"
+                >
+                  Panel Discussion
                 </a>
                 <a
                   href="#venue"

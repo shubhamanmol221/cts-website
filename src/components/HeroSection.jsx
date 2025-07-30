@@ -39,21 +39,24 @@ export function HeroSection() {
 
       {/* Centered Content Container */}
       <div className="relative z-20 flex flex-col items-center w-full max-w-4xl px-4">
-        {/* Badge with Logo */}
-        <div className="inline-flex items-center gap-2 bg-green-100/90 backdrop-blur-sm text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-8 shadow-lg animate-fade-in-up">
-          <img src="/images/cts_logo.png" alt="Summit Logo" className="w-8 h-8 object-contain" />
-          Technology Summit 2025
+        
+        {/* Larger Logo, shifted upward */}
+        <div className="-mb-10 animate-fade-in-up z-10">
+          <img src="/images/cts_logo.png" alt="Summit Logo" className="w-48 h-48 md:w-56 md:h-56 object-contain drop-shadow-xl" />
         </div>
 
         {/* Main Content Card (Title and Description) */}
         <div className="bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-2xl p-8 md:p-12 shadow-2xl hover:bg-white/15 hover:border-white/40 transition-all duration-500 hover:scale-[1.02] w-full mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg animate-fade-in-up animation-delay-200">
-            Candela Technology
-            <span className="block text-green-300">Summit 2025</span>
-          </h1>
-          <p className="text-xl text-white/90 leading-relaxed drop-shadow-md animate-fade-in-up animation-delay-400">
-            Join us for a deep dive into cutting-edge wireless technology, evolving Wi-Fi standards, and advanced testing strategies driving real-world user experience.
-          </p>
+          {/* Add top padding to account for the overlapping logo */}
+          <div className="pt-10">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg animate-fade-in-up animation-delay-200">
+              Candela Technology
+              <span className="block text-green-300">Summit 2025</span>
+            </h1>
+            <p className="text-xl text-white/90 leading-relaxed drop-shadow-md animate-fade-in-up animation-delay-400">
+              Join us for a deep dive into cutting-edge wireless technology, evolving Wi-Fi standards, and advanced testing strategies driving real-world user experience.
+            </p>
+          </div>
         </div>
 
         {/* Event Details (Date, Time, Location) */}

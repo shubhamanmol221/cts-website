@@ -1,43 +1,43 @@
 import { User } from "lucide-react"
 import { AnimatedSection } from "./AnimatedSection"
 import { Card, CardContent } from "./Card"
-import { Badge } from "./Badge"
+// import { Badge } from "./Badge"
 
 export function SpeakersSection() {
   const speakers = [
     {
       name: "Dr. Srikanth",
-      topic: "802.11 PHY evolution, hits and misses",
-      image: "/images/srikanth.png", // Changed to passport size dimensions
+      topic: "802.11 PHY Evolution, Hits and Misses",
+      image: "/images/srikanth.png",
     },
     {
       name: "Susinder Gulasekaran",
-      topic: "The problems with spatial reuse",
-      image: "/images/Susinder.png", // Changed to passport size dimensions
+      topic: "The Problems with Spatial reuse in Wi-Fi 6 & Wi-Fi 7",
+      image: "/images/Susinder.png",
     },
     {
       name: "Shivam Thakur",
-      topic: "Nuts and Bolts of Wifi and OpenWrt",
-      image: "/images/shivam.png", // Changed to passport size dimensions
+      topic: "Nuts and Bolts of Wi-Fi and OpenWrt",
+      image: "/images/shivam.png",
     },
     {
       name: "Rasika",
-      topic: "Exploring Wi-Fi 7's Security Enhancements",
-      image: "/images/rasika.png", // Changed to passport size dimensions
+      topic: "Exploring Wi-Fi 7 Security Enhancements",
+      image: "/images/rasika.png",
     },
     {
       name: "Shashank",
-      topic: "Adaptive Enhancing Channel Selection with Adaptive DFS",
-      image: "images/sashank.png", // Changed to passport size dimensions
+      topic: "Real Time WiFi Testing - Providing Immediate Stability & Behavioural Insights",
+      image: "images/sashank.png",
     },
      {
       name: "Gjermund Raaen",
-      topic: "EHT Preamble",
-      image: "images/Gjermund Raaen.png", // Changed to passport size dimensions
+      topic: "Understanding EHT Preamble in WiFi 7 Phy Layer ",
+      image: "images/Gjermund Raaen.png",
     },
   ]
 
-const speakersPerRow = 3
+  const speakersPerRow = 3
   const totalSpeakers = speakers.length
   const lastRowCount = totalSpeakers % speakersPerRow
   const fullRows = Math.floor(totalSpeakers / speakersPerRow)
@@ -81,9 +81,6 @@ const speakersPerRow = 3
                         <p className="text-green-600 font-medium mb-4 min-h-[2.5rem] flex items-center justify-center">
                           {speaker.topic}
                         </p>
-                      </div>
-                      <div className="mt-auto pt-4 border-t border-green-100">
-                        <Badge className="bg-green-50 text-green-700 border border-green-200">Expert Speaker</Badge>
                       </div>
                     </CardContent>
                   </Card>
@@ -130,9 +127,6 @@ const speakersPerRow = 3
                           <p className="text-green-600 font-medium mb-4 min-h-[2.5rem] flex items-center justify-center">
                             {speaker.topic}
                           </p>
-                        </div>
-                        <div className="mt-auto pt-4 border-t border-green-100">
-                          <Badge className="bg-green-50 text-green-700 border border-green-200">Expert Speaker</Badge>
                         </div>
                       </CardContent>
                     </Card>

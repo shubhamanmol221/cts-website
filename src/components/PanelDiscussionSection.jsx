@@ -5,7 +5,7 @@ import { Badge } from "./Badge"
 
 export function PanelDiscussionSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-green-50 to-white">
+    <section id="panel-discussion" className="py-20 bg-gradient-to-br from-green-50 to-white">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-16">
@@ -19,9 +19,7 @@ export function PanelDiscussionSection() {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection delay={300}>
             <Card className="group hover:shadow-xl transition-all duration-300 border-green-100 hover:border-green-200 overflow-hidden">
-              {/* Changed 'h-auto lg:h-80' to just 'h-auto' to allow content to dictate height on all screen sizes */}
               <div className="flex flex-col lg:flex-row h-auto">
-                {/* Left side - Panel Image with proper padding */}
                 <div className="lg:w-1/2 relative p-6 flex items-center justify-center bg-gradient-to-br from-green-50/30 to-white/50">
                   <div className="w-full h-52 lg:h-full max-h-64 relative">
                     <img
@@ -33,7 +31,6 @@ export function PanelDiscussionSection() {
                   </div>
                 </div>
 
-                {/* Right side - Panel Details */}
                 <div className="lg:w-1/2 flex flex-col">
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between gap-4">
@@ -56,7 +53,6 @@ export function PanelDiscussionSection() {
                       opportunities in the wireless technology sector.
                     </p>
 
-                    {/* Panel Details - Compact layout */}
                     <div className="space-y-3 mb-4">
                       <div className="flex flex-wrap items-center gap-3 text-xs text-green-600">
                         <div className="flex items-center gap-1">
@@ -69,7 +65,6 @@ export function PanelDiscussionSection() {
                         </div>
                       </div>
 
-                      {/* Panelists - Compact grid */}
                       <div>
                         <h4 className="font-semibold text-green-800 mb-2 flex items-center gap-1 text-sm">
                           <User className="w-3 h-3" />
