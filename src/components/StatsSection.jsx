@@ -2,10 +2,10 @@ import { AnimatedSection } from "./AnimatedSection"
 
 export function StatsSection() {
   const stats = [
-    { number: "14", label: "Technical Sessions" },
-    { number: "25+", label: "Expert Speakers" },
-    { number: "10", label: "Hours of Content" },
-    { number: "1", label: "Day Event" },
+    { number: "10+", label: "Technical Sessions" },
+    { number: "1", label: "Expert Panel Discussion" },
+    { number: "10+", label: "Hours of Content" },
+    { number: "4", label: "Product Launches" },
   ]
 
   return (

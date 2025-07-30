@@ -9,7 +9,7 @@ export function ContactSection() {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-green-800 mb-4">Get in Touch</h2>
-            <p className="text-xl text-green-600">Have questions? We're here to help</p>
+            <p className="text-xl text-green-600">Have any questions? would like to attend the event?</p>
           </div>
         </AnimatedSection>
 

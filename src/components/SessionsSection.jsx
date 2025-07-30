@@ -19,9 +19,9 @@ export function SessionsSection({ sessions }) {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-green-800 mb-4">Technical Sessions</h2>
-            <p className="text-xl text-green-600 max-w-2xl mx-auto">
+            {/* <p className="text-xl text-green-600 max-w-2xl mx-auto">
               Explore cutting-edge topics in wireless technology, AI, and network optimization
-            </p>
+            </p> */}
           </div>
         </AnimatedSection>
 

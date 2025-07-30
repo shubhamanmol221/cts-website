@@ -52,8 +52,7 @@ export function HeroSection() {
             <span className="block text-green-300">Summit 2025</span>
           </h1>
           <p className="text-xl text-white/90 leading-relaxed drop-shadow-md animate-fade-in-up animation-delay-400">
-            Join us for an immersive day of cutting-edge wireless technology insights, AI-driven innovations, and the
-            future of Wi-Fi standards.
+            Join us for a deep dive into cutting-edge wireless technology, evolving Wi-Fi standards, and advanced testing strategies driving real-world user experience.
           </p>
         </div>
 
