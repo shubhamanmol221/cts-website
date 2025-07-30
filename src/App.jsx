@@ -1,12 +1,11 @@
 "use client"
-
 import { Header } from "./components/Header"
 import { HeroSection } from "./components/HeroSection"
 import { PosterSection } from "./components/PosterSection"
 import { StatsSection } from "./components/StatsSection"
 import { SpeakersSection } from "./components/SpeakersSection"
 import { SessionsSection } from "./components/SessionsSection"
-// import { VenueSection } from "./components/VenueSection"
+import { PanelDiscussionSection } from "./components/PanelDiscussionSection"
 import { ContactSection } from "./components/ContactSection"
 import { Footer } from "./components/Footer"
 import "./App.css"
@@ -14,15 +13,104 @@ import "./App.css"
 function App() {
   const sessions = [
     {
-      id: "phy-evolution",
-      title: "802.11 PHY evolution; hits and misses",
-      authors: "Dr. Srikanth",
+      id: "problems-spatial-reuse",
+      title: "The Problems with Spatial reuse in Wi-Fi 6 & Wi-Fi 7",
+      authors: "Susinder Gulasekaran",
+      image: "/images/susinder_session.png", 
+      abstract:
+        "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
+      category: "Network Optimization",
+      time: "09:30 AM - 09:55 AM",
+      duration: "25 minutes",
+      fullDescription:
+        "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
+      objectives: [
+        "Understand the concept of spatial reuse in Wi-Fi 6 and Wi-Fi 7.",
+        "Identify the practical problems leading to zero adoption of spatial reuse.",
+        "Discuss the fundamental issues overlooked by this feature.",
+        "Gain insights into the limitations of OBSS PD and PSR based spatial reuse."
+      ],
+      targetAudience:
+        "Network engineers, Wi-Fi system designers, researchers, and professionals interested in Wi-Fi 6/7 performance.",
+      prerequisites: "Basic understanding of Wi-Fi 6/7 concepts and network efficiency."
+    },
+    {
+      id: "nuts-bolts-wifi-openwrt",
+      title: "Nuts and Bolts of Wi-Fi and OpenWrt",
+      authors: "Shivam Thakur",
+      image: "/images/shivam_session.png", 
+      abstract:
+        "Brief introduction to linux subsystem to wifi and networking, Openwrt Architecture and Kernel Frameworks, What is new in WiFi 7 in kernel Frameworks, A Live demo on Banana Pi R4: Rust application for managing the WiFi, Understanding the various Mesh Technologies",
+      category: "Software & OS",
+      time: "09:55 AM - 10:20 AM",
+      duration: "25 minutes",
+      fullDescription:
+        "This session provides a comprehensive look into the underlying mechanisms of Wi-Fi within a Linux environment, with a special focus on OpenWrt. We will cover the architecture and kernel frameworks of OpenWrt, delve into new features introduced in Wi-Fi 7's kernel frameworks, and demonstrate a live application in Rust for managing Wi-Fi on a Banana Pi R4. Additionally, we will explore various mesh technologies and their implications.",
+      objectives: [
+        "Understand the Linux Wi-Fi and networking subsystem.",
+        "Learn about OpenWrt architecture and kernel frameworks.",
+        "Discover new Wi-Fi 7 features in kernel frameworks.",
+        "Witness a live demo of Wi-Fi management using Rust on Banana Pi R4.",
+        "Gain insights into different Mesh Technologies."
+      ],
+      targetAudience:
+        "Embedded developers, network engineers, Linux enthusiasts, and anyone interested in OpenWrt and Wi-Fi internals.",
+      prerequisites: "Familiarity with Linux command line and basic networking concepts."
+    },
+    {
+      id: "evaluating-wifi-ble-interference",
+      title: "Evaluating Wi-Fi Performance Under BLE Interference Conditions",
+      authors: "Manoj K, Yaswanth P, Venu Madhav M",
+      image: "/images/manoj_session.png", 
+      abstract:
+        "This session focuses on understanding and evaluating the impact of Bluetooth Low Energy (BLE) interference on Wi-Fi performance. We will discuss methodologies and tools to measure Wi-Fi degradation and analyze real-world scenarios to provide insights into mitigating such interference.",
+      category: "Interference & Performance",
+      time: "10:20 AM - 10:45 AM",
+      duration: "25 minutes",
+      fullDescription:
+        "As wireless technologies proliferate, understanding co-existence challenges is crucial. This session delves into the specific interference caused by Bluetooth Low Energy (BLE) devices on Wi-Fi networks. We will present various test methodologies, demonstrate the use of specialized tools for performance evaluation under BLE interference, and analyze data from real-world case studies to provide actionable insights for network optimization and interference mitigation strategies.",
+      objectives: [
+        "Understand the mechanisms of BLE interference on Wi-Fi.",
+        "Learn methodologies for evaluating Wi-Fi performance under interference.",
+        "Identify key metrics to assess Wi-Fi degradation.",
+        "Explore strategies for mitigating BLE interference."
+      ],
+      targetAudience:
+        "RF engineers, network testers, IoT developers, and wireless product developers.",
+      prerequisites: "Basic knowledge of Wi-Fi and Bluetooth technologies."
+    },
+    {
+      id: "packet-to-panel-realtime-analysis",
+      title: "Packet to Panel: Real-Time Network Traffic Analysis and Visualization",
+      authors: "Nikhita K, Renusree R",
+      image: "/images/nikitha_session.png", 
+      abstract:
+        "This project introduces a real-time dashboard that visualizes network traffic, latency spikes, and device-specific statistics, enabling live debugging. Traditional analysis of WiFi performance issues is often manual and post-event.",
+      category: "Analytics & Monitoring",
+      time: "10:45 AM - 11:10 AM",
+      duration: "25 minutes",
+      fullDescription:
+        "Transform your network troubleshooting approach with real-time visualization and analytics. This session introduces an innovative dashboard that processes network packets in real-time, providing instant insights into traffic patterns, performance bottlenecks, and device-specific issues. Learn how to move from reactive to proactive network management with live monitoring and automated alerting systems.",
+      objectives: [
+        "Implement real-time packet analysis and visualization.",
+        "Create interactive dashboards for network monitoring.",
+        "Develop automated alerting systems for performance issues.",
+        "Learn best practices for live network debugging."
+      ],
+      targetAudience:
+        "Network administrators, system engineers, DevOps professionals, and network monitoring specialists.",
+      prerequisites: "Basic networking knowledge and familiarity with packet analysis tools."
+    },
+    {
+      id: "80211-phy-evolution",
+      title: "802.11 PHY Evolution, Hits and Misses",
+      authors: "Srikanth Subramanian",
       image: "/images/srikanth_session.png",
       abstract:
         "The WiFi success story has been built on evolving 802.11 standards adding higher speeds and other features. In the PHY evolution, crucial technologies like OFDM, MIMO, higher-order QAM, OFDMA, MU-MIMO etc. have been standardized to move the technology to achieve greater speeds amongst other benefits. In this talk we will talk about what has clicked with respect to practice and some which have not worked well in practice.",
       category: "PHY Layer",
-      time: "9:00 AM - 10:00 AM",
-      duration: "60 minutes",
+      time: "11:25 AM - 11:50 AM",
+      duration: "25 minutes",
       fullDescription:
         "This comprehensive session will take you through the journey of 802.11 PHY layer evolution, examining both the successes and challenges faced in implementing various technologies. We'll explore how OFDM revolutionized wireless communication, the impact of MIMO technology on throughput and reliability, and the practical implications of higher-order QAM modulation schemes. The presentation will also cover the transition to OFDMA and MU-MIMO in Wi-Fi 6, discussing real-world performance versus theoretical expectations.",
       objectives: [
@@ -36,147 +124,81 @@ function App() {
       prerequisites: "Basic understanding of wireless communication principles and 802.11 standards",
     },
     {
-      id: "adaptive-dfs",
-      title: "Exploring Wi-Fi 7’s Security Enhancements",
-      authors: "Rasika",
-      image: "/images/rasika_session.png",
-      abstract:
-        "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
-      category: "Network Optimization",
-      time: "11:45 AM - 12:45 PM",
-      duration: "60 minutes",
-      fullDescription:
-        "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
-      objectives: [
-        "Understand the fundamentals of DFS and radar detection",
-        "Learn about adaptive algorithms for intelligent channel selection",
-        "Explore techniques to minimize network disruption during DFS events",
-        "Analyze real-world case studies of adaptive DFS implementation",
-      ],
-      targetAudience:
-        "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
-      prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
-    },
-    {
-      id: "adaptive-dfs",
-      title: "Enhancing Channel Selection with Adaptive DFS",
-      authors: "Shashank Tadakamadla",
-      image: "/images/sashank_session.png",
-      abstract:
-        "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
-      category: "Network Optimization",
-      time: "11:45 AM - 12:45 PM",
-      duration: "60 minutes",
-      fullDescription:
-        "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
-      objectives: [
-        "Understand the fundamentals of DFS and radar detection",
-        "Learn about adaptive algorithms for intelligent channel selection",
-        "Explore techniques to minimize network disruption during DFS events",
-        "Analyze real-world case studies of adaptive DFS implementation",
-      ],
-      targetAudience:
-        "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
-      prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
-    },
-    {
-      id: "adaptive-dfs",
-      title: "The problems with spatial reuse",
-      authors: "Susinder Gulasekaran",
-      image: "/images/susinder_session.png",
-      abstract:
-        "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
-      category: "Network Optimization",
-      time: "11:45 AM - 12:45 PM",
-      duration: "60 minutes",
-      fullDescription:
-        "Spatial reuse is an optional new feature introduced in Wi-Fi 6 intended to increase the network efficiency in dense deployments where two or more neighboring access points share the same primary channel. There are two types of spatial reuse defined in the standard - OBSS PD based spatial reuse for downlink transmissions and PSR based spatial reuse for trigggered uplink transmissions. However, there is zero adoption of this feature in practice. This talk gives some insights into the reasons behind it and highlights some fundamental problems which have been overlooked by this feature in WiFi 6 and WiFi 7.",
-      objectives: [
-        "Understand the fundamentals of DFS and radar detection",
-        "Learn about adaptive algorithms for intelligent channel selection",
-        "Explore techniques to minimize network disruption during DFS events",
-        "Analyze real-world case studies of adaptive DFS implementation",
-      ],
-      targetAudience:
-        "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
-      prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
-    },
-    {
-      id: "adaptive-dfs",
-      title: "Nuts and Bolts of Wifi and OpenWrt",
-      authors: "Shivam Thakur",
-      image: "/images/shivam_session.png",
-      abstract:
-        "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
-      category: "Network Optimization",
-      time: "11:45 AM - 12:45 PM",
-      duration: "60 minutes",
-      fullDescription:
-        "Brief introduction to linux subsystem to wifi and networking , ⁠Openwrt Architecture and Kernel Frameworks, ⁠What is new in WiFi 7 in kernel Frameworks,  A Live demo on Banana Pi R4: Rust application for managing the WiFi , ⁠Understanding the various Mesh Technologies",
-      objectives: [
-        "Understand the fundamentals of DFS and radar detection",
-        "Learn about adaptive algorithms for intelligent channel selection",
-        "Explore techniques to minimize network disruption during DFS events",
-        "Analyze real-world case studies of adaptive DFS implementation",
-      ],
-      targetAudience:
-        "RF engineers, network planners, wireless system architects, and regulatory compliance professionals",
-      prerequisites: "Understanding of 5 GHz spectrum regulations and basic knowledge of radar systems",
-    },
-    {
-      id: "candela-assist",
-      title: "Built for Engineers. Driven by AI. Introducing Candela Assist",
-      authors: "Vardhan, Siva & Sahithi",
+      id: "mlo-behaviour-impact",
+      title: "MLO Behaviour: Impact on Legacy Devices and Roaming",
+      authors: "Shyamala P, Kiranmai N, Rajendra P",
       image: "/placeholder.svg?height=200&width=300",
       abstract:
-        "Candela Assist is an advanced, AI-powered platform designed to streamline wireless testing workflows. It integrates natural language understanding, automation, and visualization tools to empower engineers to design and validate Wi-Fi networks more efficiently.",
-      category: "AI & Automation",
-      time: "10:30 AM - 11:30 AM",
-      duration: "60 minutes",
+        "Multi-Link Operation (MLO) is a key feature in Wi-Fi 7, enabling devices to transmit and receive data over multiple frequency bands simultaneously. This session will explore how MLO impacts legacy Wi-Fi devices and its implications for seamless roaming experiences in mixed network environments.",
+      category: "Wi-Fi 7 Features",
+      time: "11:50 AM - 12:15 PM",
+      duration: "25 minutes",
       fullDescription:
-        "Discover how artificial intelligence is transforming wireless network testing with Candela Assist. This session will demonstrate how natural language processing can simplify complex testing procedures, allowing engineers to describe test scenarios in plain English and have them automatically translated into executable test configurations. We'll showcase real-world examples of how AI-driven automation reduces testing time, improves accuracy, and enables more comprehensive network validation.",
+        "MLO in Wi-Fi 7 promises unprecedented throughput and efficiency. However, its introduction raises critical questions about backward compatibility and roaming behavior in networks with a mix of Wi-Fi 7 and older devices. This session will provide a detailed analysis of MLO's impact on legacy devices, examining potential performance degradation or compatibility issues. We will also discuss how MLO influences roaming decisions and strategies to ensure smooth transitions for all devices in a multi-link environment.",
       objectives: [
-        "Learn how AI can streamline wireless testing workflows",
-        "Understand natural language processing in network testing",
-        "Explore automated test generation and execution",
-        "See practical demonstrations of Candela Assist capabilities",
+        "Understand the principles of Multi-Link Operation (MLO) in Wi-Fi 7.",
+        "Analyze MLO's impact on the performance and compatibility of legacy Wi-Fi devices.",
+        "Explore how MLO affects roaming behavior and handoffs.",
+        "Identify strategies for optimizing MLO in mixed device environments."
       ],
       targetAudience:
-        "Test engineers, network administrators, QA professionals, and anyone involved in wireless network validation",
-      prerequisites: "Familiarity with wireless network testing concepts and basic understanding of AI/ML principles",
+        "Network architects, Wi-Fi product managers, test engineers, and wireless network administrators.",
+      prerequisites: "Basic understanding of Wi-Fi 6 and Wi-Fi 7 features."
     },
     {
-      id: "seamless-switchover",
-      title: "Seamless Switchover Between Wi-Fi and Cellular using Policy Engines",
-      authors: "Manoj, Sirisha",
-      image: "/placeholder.svg?height=200&width=300",
+      id: "exploring-wifi7-security-enhancements",
+      title: "Exploring Wi-Fi 7 Security Enhancements",
+      authors: "Rasika Nayanajith",
+      image: "/images/rasika_session.png", 
       abstract:
-        "To evaluate the performance, reliability, and logic behind seamless transitions between Wi-Fi and 5G networks using programmable policy engines. This includes a demonstration of real-world testing scenarios and KPIs.",
-      category: "Network Integration",
-      time: "2:00 PM - 3:00 PM",
-      duration: "60 minutes",
+        "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
+      category: "Security",
+      time: "12:15 PM - 12:40 PM",
+      duration: "25 minutes",
       fullDescription:
-        "As mobile devices increasingly rely on both Wi-Fi and cellular connectivity, seamless handoffs between these technologies become critical for user experience. This session explores programmable policy engines that can intelligently manage network transitions based on signal quality, network load, application requirements, and user preferences. We'll demonstrate real-world testing scenarios and analyze key performance indicators that determine handoff success.",
+        "While Wi-Fi 7 (based on IEEE 802.11be) is best known for its speed improvements and low-latency capabilities, it also introduces several key security enhancements that build upon the foundation laid by previous generations. In this session, we’ll explore how Wi-Fi 7 improves wireless security through mandatory WPA3 adoption, enhanced protections for Multi-Link Operation (MLO), and new features like Beacon Protection.",
       objectives: [
-        "Understand the challenges of Wi-Fi to cellular handoffs",
-        "Learn about programmable policy engines for network selection",
-        "Explore KPIs and metrics for evaluating handoff performance",
-        "See live demonstrations of seamless network transitions",
+        "Understand the security foundation of Wi-Fi 7.",
+        "Learn about mandatory WPA3 adoption in Wi-Fi 7.",
+        "Explore enhanced protections for Multi-Link Operation (MLO).",
+        "Discover new security features like Beacon Protection.",
       ],
       targetAudience:
-        "Mobile network engineers, system integrators, telecom professionals, and mobility solution developers",
-      prerequisites: "Knowledge of both Wi-Fi and cellular network technologies",
+        "Network security professionals, Wi-Fi system architects, and anyone interested in wireless security advancements.",
+      prerequisites: "Basic understanding of Wi-Fi security protocols (WPA2/WPA3)."
     },
     {
-      id: "client-behavior",
-      title: "Looking closer at the client: A deep dive into STA behavior",
-      authors: "Sainath, Deepika",
-      image: "/placeholder.svg?height=200&width=300",
+      id: "understanding-eht-preamble-wifi7",
+      title: "Understanding EHT Preamble in WiFi 7 Phy Layer",
+      authors: "Gjermund Raaen",
+      image: "/images/gjermund_session.png",
+      abstract:
+        "This presentation talks about how HE and EHT uses content channels to distribute RU allocation and user info in their preambles at different bandwidths and different modes.",
+      category: "PHY Layer",
+      time: "02:00 PM - 02:25 PM",
+      duration: "25 minutes",
+      fullDescription:
+        "Dive deep into the intricacies of EHT (802.11be) preambles and their role in advanced Wi-Fi communication. This session will explore how High-Efficiency (HE) and Extremely High Throughput (EHT) technologies leverage content channels to efficiently distribute Resource Unit (RU) allocation and user information within their preambles. We will discuss the variations across different bandwidths and operational modes, providing a comprehensive understanding of the signaling mechanisms that enable Wi-Fi 7's unprecedented performance.",
+      objectives: [
+        "Understand the structure and purpose of HE and EHT preambles",
+        "Learn how content channels are used for RU allocation and user info distribution",
+        "Analyze preamble behavior across different bandwidths",
+        "Explore various operational modes and their impact on preamble content",
+      ],
+      targetAudience:
+        "Wireless engineers, PHY layer specialists, researchers, and anyone interested in the technical details of Wi-Fi 6 and Wi-Fi 7",
+      prerequisites: "Familiarity with 802.11 physical layer concepts and basic understanding of OFDMA",
+    },
+    {
+      id: "looking-closer-client-sta-testing",
+      title: "Looking Closer at the Client: A Deep Dive into STA side Testing",
+      authors: "Sainath P, Deepika B, Badhiri T",
+      image: "/placeholder.svg?height=200&width=300", 
       abstract:
         "Access point performance is often the primary focus during Wi-Fi testing, but understanding the client (STA) behavior is critical. This talk explores techniques to simulate and analyze various client-side conditions and reactions.",
-      category: "Client Analysis",
-      time: "3:15 PM - 4:15 PM",
-      duration: "60 minutes",
+      category: "Client Analysis & Testing",
+      time: "02:25 PM - 02:50 PM",
+      duration: "25 minutes",
       fullDescription:
         "While much attention is given to access point optimization, client device behavior significantly impacts overall network performance. This session provides deep insights into how different client devices behave under various network conditions, including power save modes, roaming decisions, and association patterns. We'll explore advanced simulation techniques and analysis tools that help engineers understand and predict client behavior in complex network environments.",
       objectives: [
@@ -190,37 +212,37 @@ function App() {
       prerequisites: "Solid understanding of 802.11 protocol and client-server interactions",
     },
     {
-      id: "traffic-analysis",
-      title: "Packet to Panel: Real-Time Network Traffic Analysis Dashboard",
-      authors: "Renusree, Nikitha",
-      image: "/placeholder.svg?height=200&width=300",
+      id: "built-for-engineers-driven-ai",
+      title: "Built for Engineers. Driven by AI. Introducing Candela Assist",
+      authors: "Vardhan S, Siva K, Sahithi U",
+      image: "/images/vardhan_session.png",
       abstract:
-        "Traditional analysis of WiFi performance issues is often manual and post-event. This project introduces a real-time dashboard that visualizes network traffic, latency spikes, and device-specific statistics, enabling live debugging.",
-      category: "Analytics",
-      time: "4:30 PM - 5:30 PM",
-      duration: "60 minutes",
+        "Candela Assist is an advanced, AI-powered platform designed to streamline wireless testing workflows. It integrates natural language understanding, automation, and visualization tools to empower engineers to design and validate Wi-Fi networks more efficiently.",
+      category: "AI & Automation",
+      time: "02:50 PM - 03:15 PM",
+      duration: "25 minutes",
       fullDescription:
-        "Transform your network troubleshooting approach with real-time visualization and analytics. This session introduces an innovative dashboard that processes network packets in real-time, providing instant insights into traffic patterns, performance bottlenecks, and device-specific issues. Learn how to move from reactive to proactive network management with live monitoring and automated alerting systems.",
+        "Discover how artificial intelligence is transforming wireless network testing with Candela Assist. This session will demonstrate how natural language processing can simplify complex testing procedures, allowing engineers to describe test scenarios in plain English and have them automatically translated into executable test configurations. We'll showcase real-world examples of how AI-driven automation reduces testing time, improves accuracy, and enables more comprehensive network validation.",
       objectives: [
-        "Implement real-time packet analysis and visualization",
-        "Create interactive dashboards for network monitoring",
-        "Develop automated alerting systems for performance issues",
-        "Learn best practices for live network debugging",
+        "Learn how AI can streamline wireless testing workflows",
+        "Understand natural language processing in network testing",
+        "Explore automated test generation and execution",
+        "See practical demonstrations of Candela Assist capabilities",
       ],
       targetAudience:
-        "Network administrators, system engineers, DevOps professionals, and network monitoring specialists",
-      prerequisites: "Basic networking knowledge and familiarity with packet analysis tools",
+        "Test engineers, network administrators, QA professionals, and anyone involved in wireless network validation",
+      prerequisites: "Familiarity with wireless network testing concepts and basic understanding of AI/ML principles",
     },
     {
-      id: "real-time-testing",
-      title: "Real Time WiFi Testing",
+      id: "real-time-wifi-testing-insights",
+      title: "Real Time WiFi Testing - Providing Immediate Stability & Behavioural Insights",
       authors: "Shashank Tadakamadla",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/sashank_session.png", 
       abstract:
         "Real-Time Wi-Fi Testing refers to the continuous and dynamic evaluation of wireless network performance under live, real-world conditions. Unlike traditional lab-based or static test methods, real-time testing simulates active user scenarios, mobility, and real-world interference — providing immediate insights into network behavior and stability.",
       category: "Testing & Validation",
-      time: "5:45 PM - 6:30 PM",
-      duration: "45 minutes",
+      time: "03:15 PM - 03:40 PM",
+      duration: "25 minutes",
       fullDescription:
         "This session explores the evolution from traditional static Wi-Fi testing to dynamic real-time evaluation methodologies. We'll examine how real-time testing frameworks can capture network performance under actual usage conditions, including user mobility, varying traffic loads, and environmental interference. The presentation will cover advanced testing tools and techniques that provide continuous monitoring and instant feedback on network quality, enabling proactive optimization and troubleshooting.",
       objectives: [
@@ -233,13 +255,55 @@ function App() {
       targetAudience: "Network test engineers, QA professionals, Wi-Fi system validators, and network operations teams",
       prerequisites: "Experience with Wi-Fi testing tools and basic understanding of network performance metrics",
     },
-  ]
+    {
+      id: "lab-promises-vs-live-challenges",
+      title: "Lab Promises vs Live Challenges - The Evolution of Wi-Fi Lab Testing",
+      authors: "Poojitha Y, Anmol S, Rudra S, Veena P",
+      image: "/placeholder.svg?height=200&width=300",
+      abstract:
+        "This session will explore the discrepancies between Wi-Fi performance in controlled lab environments and real-world live deployments. We will discuss the evolution of Wi-Fi lab testing methodologies to better simulate live challenges and bridge this gap.",
+      category: "Testing & Validation",
+      time: "04:40 PM - 05:05 PM",
+      duration: "25 minutes",
+      fullDescription:
+        "Wi-Fi product development often relies heavily on controlled lab testing, but the actual performance in live environments can vary significantly due to complex real-world factors. This session critically examines the limitations of traditional lab testing and how the industry is evolving to create more realistic and robust testbeds. We will discuss advanced simulation techniques, incorporating real-world interference, and developing new metrics to ensure that lab promises translate into reliable live performance.",
+      objectives: [
+        "Understand the differences between lab and live Wi-Fi performance.",
+        "Explore the evolution of Wi-Fi lab testing methodologies.",
+        "Identify key challenges in simulating real-world Wi-Fi environments.",
+        "Learn about new approaches to bridge the gap between lab and live performance.",
+      ],
+      targetAudience:
+        "Wi-Fi test engineers, quality assurance professionals, product developers, and network architects.",
+      prerequisites: "Familiarity with Wi-Fi testing concepts and network performance metrics."
+    },
+    {
+      id: "turning-homes-into-labs",
+      title: "Turning homes into Labs - Automating Wi-Fi Test Houses",
+      authors: "Akhil P, Saurabh G, Litin O, Md Aarif",
+      image: "/images/akhil_session.png",
+      abstract:
+        "This session explores innovative approaches to transform residential environments into automated Wi-Fi test houses. We will discuss the challenges and solutions for setting up cost-effective, scalable, and reproducible testbeds in home settings for extensive Wi-Fi testing.",
+      category: "Testing & Automation",
+      time: "05:05 PM - 05:30 PM",
+      duration: "25 minutes",
+      fullDescription:
+        "With the increasing complexity of Wi-Fi networks and device interactions, traditional lab setups can be limiting. This session presents a revolutionary approach: leveraging homes as distributed, automated Wi-Fi test environments. We will delve into the practicalities of instrumenting a home network for comprehensive testing, including setting up automation frameworks, collecting diverse performance data, and analyzing results. Learn how to create scalable and cost-efficient test houses for continuous Wi-Fi validation.",
+      objectives: [
+        "Understand the concept of automated Wi-Fi test houses in residential settings.",
+        "Explore challenges in setting up and managing home-based testbeds.",
+        "Learn about automation tools and techniques for Wi-Fi testing at home.",
+        "Discover methods for collecting and analyzing Wi-Fi performance data in a home environment.",
+      ],
+      targetAudience:
+        "Wi-Fi test engineers, home automation enthusiasts, network researchers, and product developers looking for cost-effective testing solutions.",
+      prerequisites: "Basic understanding of Wi-Fi networking and familiarity with automation concepts."
+    },
+  ];
 
  const handleBackToHome = () => {
     // This function can be used for other navigation if needed
   }
-
-  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-50">
@@ -249,7 +313,7 @@ function App() {
       <StatsSection />
       <SpeakersSection />
       <SessionsSection sessions={sessions} />
-      {/* <VenueSection /> */}
+      <PanelDiscussionSection />
       <ContactSection />
       <Footer />
     </div>
@@ -257,4 +321,3 @@ function App() {
 }
 
 export default App
-

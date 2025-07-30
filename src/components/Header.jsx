@@ -37,9 +37,9 @@ export function Header({ onBackToHome }) {
               <a href="#sessions" className="text-green-700 hover:text-green-800 font-medium transition-colors">
                 Sessions
               </a>
-              <a href="#venue" className="text-green-700 hover:text-green-800 font-medium transition-colors">
+              {/* <a href="#venue" className="text-green-700 hover:text-green-800 font-medium transition-colors">
                 Venue
-              </a>
+              </a> */}
               <a href="#contact" className="text-green-700 hover:text-green-800 font-medium transition-colors">
                 Contact
               </a>
