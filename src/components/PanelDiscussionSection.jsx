@@ -23,7 +23,7 @@ export function PanelDiscussionSection() {
                 <div className="lg:w-1/2 relative p-6 flex items-center justify-center bg-gradient-to-br from-green-50/30 to-white/50">
                   <div className="w-full h-52 lg:h-full max-h-64 relative">
                     <img
-                      src="/images/vardhan_session.png"
+                      src="/images/panel_discussion.png"
                       alt="Panel Discussion - Building Impactful Careers in Wi-Fi Industry"
                       className="w-full h-full object-contain rounded-lg"
                     />
